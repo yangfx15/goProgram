@@ -28,6 +28,7 @@ func fetch(url string, ch chan<- string) {
 
 func main()  {
 	start := time.Now()
+	// channel初始化的几种方式
 	ch := make(chan string)
 	for _, url := range os.Args[1:] {
 		go fetch(url, ch)
